@@ -4,8 +4,33 @@
 
     </head>
     <body>
-        <div class="logo">
-            <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png">
+        <div class="page_layout">
+            <style>
+                .page_layout{
+                    background-color: white;
+                    display: grid;
+                    grid-template-columns: 1fr, 1fr, 1fr;
+                    grid-template-rows: 1fr, 1fr, 1fr, 1fr;
+                    grid-template-areas: 
+                        "l_header r_header r_header"
+                        "main main main"
+                        "blank blank blank"
+                        "footer footer footer";
+                    }
+            </style>
+            <div class="left_header">
+                <style>
+                    .left_header{
+                        grid-area: l_header;
+                    }
+                </style>
+                <a href="https://about.google/?fg=1&utm_source=google-US&utm_medium=referral&utm_campaign=hp-header">About</a>
+                <a href="https://store.google.com/US?utm_source=hp_header&utm_medium=google_ooo&utm_campaign=GS100042&hl=en-US">Store</a>
+            </div>
+            <div class="logo">
+                <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png">
+            </div>
         </div>
+
     </body>
 </main>
