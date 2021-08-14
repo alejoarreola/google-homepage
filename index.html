@@ -9,14 +9,16 @@
                 .page_layout{
                     background-color: white;
                     width: 100%;
+                    height: 100%;
                     display: grid;
                     grid-template-columns: auto;
-                    grid-template-rows: auto, auto, auto;
-                    grid-gap: 50px;
+                    grid-template-rows: auto, auto, auto, auto;
+                    grid-row-gap: 60px;
                     grid-template-areas:
                         "header"
                         "main"
-                        "bar";
+                        "bar"
+                        "footer";
                     }
             </style>
             <div class="right_header"> <!--this is the icons/links that are set to the top right-->
@@ -39,6 +41,7 @@
                     .left_header{
                         grid-area: header;
                         justify-self: left;
+                        padding-top: 8px;
                     }
                 </style>
                 <a href="https://about.google/?fg=1&utm_source=google-US&utm_medium=referral&utm_campaign=hp-header">About</a>
@@ -56,11 +59,36 @@
             <div class="search_bar">
                 <style>
                     .search_bar{
+                        max-width: 292px;
                         grid-area: bar;
+                        justify-self: center;
+                        padding-bottom: 50px;
+                    }
+                </style>
+                <input type="text" placeholder="Search" title="Search">
+            </div>
+            <div class="footer">
+                <style>
+                    .footer{
+                        padding-top: 50px;
+                        grid-area: footer;
                         justify-self: center;
                     }
                 </style>
-                <input type="text" placeholder="Search" title="Search" width=292px font-size=16px>
+            <div class=footer_tags>
+                <style>
+                    .footer_tags{
+                        margin: 15px;
+                        align-self: end;
+                    }
+                </style>
+                <a href=https://www.google.com/intl/en_us/ads/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1 class="footer_tags">Advertising</a>
+                <a href=https://www.google.com/services/?subid=ww-ww-et-g-awa-a-g_hpbfoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpbfooter&fg=1 class="footer_tags">Business</a>
+                <a href=https://google.com/search/howsearchworks/?fg=1 class="footer_tags">How Search Works</a>
+                <a href="https://policies.google.com/privacy?hl=en&fg=1" class="footer_tags">Privacy</a>
+                <a href="https://policies.google.com/terms?hl=en&fg=1" class="footer_tags">Terms</a>
+                <a href="https://www.google.com/preferences?hl=en&fg=1" class="footer_tags">Settings</a>
+            </div>
             </div>
         </div>
 
